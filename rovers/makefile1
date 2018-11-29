@@ -1,0 +1,27 @@
+CC=g++
+
+all: prog
+
+prog: rovercontrol.o stack.o queue.o scandata.o rover.o comData.o
+	$(CC) rovercontrol.o stack.o queue.o scandata.o rover.o comData.o
+
+rovercontrol.o: rovercontrol.cpp
+	$(CC) -c rovercontrol.cpp
+
+stack.o: stack.cpp
+	$(CC) -c stack.cpp
+
+queue.o: queue.cpp
+	$(CC) -c queue.cpp
+
+scandata.o: scandata.cpp
+	$(CC) -c scandata.cpp
+
+rover.o: rover.cpp
+	$(CC) -c rover.cpp
+
+comData.o: comData.cpp
+	$(CC) -c comData.cpp
+
+clean:
+	rm *.o prog

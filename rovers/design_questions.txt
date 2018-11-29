@@ -1,0 +1,86 @@
+=== Design and Implementation Plan Questions ===
+
+Below are a few questions about how you will design your program and your
+implementation plan. It is crucial to have a reasonable design and
+implementation plan before you start your program. Without this, success is
+unlikely. The following questions will help guide you in your thinking and
+raise some important questions and issues. There is no single "right" answer
+to each of the questions but there are some "wrong" answers. Some designs and
+plans are better than others. The point here is for you to think about what
+you're going to do.
+
+Make a copy of this file and edit it, adding your answers then turn this
+document in.
+
+----------------------------------------------------------------------
+
+1) What classes to you intend to create? List each of the classes and provide
+a brief description of the role of that class. This list is not set in
+stone. As you implement your program, if you find that you need additional
+classes that are not in this list, or that something you listed here doesn't
+really fit, that's ok. The point is to start thinking about the high-level
+structure of your program.
+
+For this assignment, I intend to create the stack and queue classes, 
+rover class, and most likely a data class of some sort to store the commands
+and scan results.  This may evolve into two seperate classes alttogethers.
+
+**Stack class will handle all of the stack commands, like push, pop, isEmpty, and peek if I need it.
+
+**Queue class will handle everything to do with my queue, including enqueue, dequeue, isEmpty and peekFront.
+
+**The rovers class will be handling the movement of the rovers themselves, as described in the instructions.
+
+**My data class(es) will just be used as setters and getters for the commands and the scan data.
+ 
+2) What class do you plan to implement first? Why?
+
+I will be starting with my data class, as I find it is easiest to start from the bottom up.  Once I have that done,
+I will work  on either my stack or queue classes.  I plan to get those fully functioning before I move on to the 
+rovers class.
+
+3) Will you use an array or a linked list to implement the queue? Why? What
+about a stack and why?
+
+I believe I will be using an array for the queue, and a linked list for the stack.
+
+Because of the max number of results being given with the constant int max results, an array would be
+best for the queue.  Since the command number for the rovers is unknown, it will be best to use a linked list
+for the stack.  
+
+4) What type of data will be stored in the queue? What type of data will be
+stored in the stack?
+
+I am pretty sure that I will create classes for coordinates of the move and for the
+scan data, so I imagine the stack and queue are going to have those two types of data in them.
+
+5) Do you plan to have any private helper methods in your rover class?
+
+As of right now I have no plans to have any private helper methods, but the need may 
+present itself as I write.
+
+6) How will you make sure that the queue doesn't crawl off the end of the
+array?
+
+Since the constant int 'max results' is declared in the cpp file, I assume that the array will
+not need a size larger than 128 elements.  If I make the array that big, then it will prevent
+the queue from crawling off the end.
+
+7) What is your testing strategy? Will you use the testqueue and teststack programs?
+
+I will most definitely use both of them.  I plan to implement a single method of a single class at a
+time and make sure that everything is working before I move on to the next item.  It may take a little
+longer, but it prevents me from having any catastrophic failures at compile time, or hard to find
+seg faults.
+
+8) What is your strategy for finding and addressing memory leaks? Will you get
+the whole program working first and then address memory leaks or will you
+check on memory leaks as you go?
+
+Since my last program had memory leaks that I didn't discover until I was getting my formatting of my output
+file squared away, I am going to do my best to prevent that.  I will be testing it every few times that I compile
+just to be sure.
+
+
+
+
